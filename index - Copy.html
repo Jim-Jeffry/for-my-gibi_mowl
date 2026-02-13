@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>For Gibisha ❤️ | A Love Letter</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:ital,wght@0,400;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root{
+  --accent: #ff4d6d;
+  --accent-light: #ff758f;
+  --accent-dark: #c9184a;
+  --day-bg: linear-gradient(135deg, #fff1f2 0%, #ffe4e6 50%, #ffd7da 100%);
+  --night-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #2d3748 100%);
+  --text-day: #4a044e;
+  --text-night: #f8f9fa;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 15px 40px rgba(249, 24, 128, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  background: var(--day-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s ease;
+  overflow-x: hidden;
+  padding: 15px;
+  color: var(--text-day);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.night {
+  background: var(--night-bg);
+  color: var(--text-night);
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Card styling */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2rem 1.5rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  transition: all 0.8s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: visible; /* Changed from hidden to visible to allow envelope content to expand */
+  width: 100%;
+}
+
+body.night .card {
+  background: rgba(30, 41, 59, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  z-index: 1;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(2.5rem, 8vw, 3.2rem);
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.subtitle {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 4vw, 1.1rem);
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+body.night .subtitle {
+  color: #cbd5e1;
+}
+
+p {
+  color: #555;
+  line-height: 1.7;
+  font-size: clamp(1rem, 4vw, 1.1rem);
+  margin-bottom: 1.2rem;
+  word-break: break-word;
+}
+
+body.night p {
+  color: #e5e7eb;
+}
+
+/* Interactive elements */
+.btn {
+  margin-top: 1.2rem;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: white;
+  font-size: clamp(1rem, 4vw, 1.1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  min-height: 50px;
+  width: 100%;
+  max-width: 280px;
+}
+
+.btn:hover, .btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.4);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.6s;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.btn-outline:hover, .btn-outline:active {
+  background: var(--accent);
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  border: 2px solid #e5e7eb;
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.2);
+}
+
+body.night input {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: #475569;
+  color: white;
+}
+
+/* Toggle button */
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.95);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  z-index: 100;
+  transition: all 0.3s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.toggle:hover, .toggle:active {
+  transform: rotate(30deg);
+}
+
+body.night .toggle {
+  background: rgba(30, 41, 59, 0.95);
+  color: #f8f9fa;
+}
+
+/* Heartbeat animation */
+.heartbeat {
+  animation: beat 1.4s infinite;
+}
+
+@keyframes beat {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.05); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* Photo reveal */
+.photo-container {
+  position: relative;
+  width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  filter: blur(15px) brightness(0.8);
+  transition: all 2s ease;
+  display: block;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.photo.reveal {
+  filter: blur(0) brightness(1);
+}
+
+.caption {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 1.2s ease;
+  color: var(--accent);
+  padding: 0 0.8rem;
+  line-height: 1.4;
+}
+
+.caption.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Love letter envelope - improved for full visibility */
+.envelope {
+  width: 100%;
+  margin: 1.5rem 0;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.envelope-back {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(135deg, var(--accent-light), var(--accent-dark));
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.25);
+}
+
+.envelope-flap {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  border-radius: 8px 8px 0 0;
+  position: absolute;
+  top: 0;
+  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+  transform-origin: top;
+  transition: all 0.6s ease;
+}
+
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+}
+
+.envelope-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.2rem;
+  text-align: left;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease, padding 0.8s ease;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+}
+
+body.night .envelope-content {
+  background: rgba(30, 41, 59, 0.95);
+}
+
+.envelope.open .envelope-content {
+  max-height: 800px;  /* Increased to ensure full letter visible */
+  padding: 1.5rem;
+}
+
+.envelope-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  z-index: 2;
+}
+
+/* Memory lane (timeline) */
+.memory-lane {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.memory-lane::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-light));
+  border-radius: 2px;
+}
+
+.memory {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: calc(100% - 40px);
+  margin-left: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-left: 3px solid var(--accent);
+  text-align: left;
+}
+
+body.night .memory {
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.memory-date {
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.memory-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Floating hearts */
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  color: var(--accent);
+  opacity: 0.5;
+  font-size: 1.2rem;
+  animation: float 8s linear infinite;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Confetti */
+.confetti {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  top: -10px;
+  z-index: 999;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Music and voice player */
+.music-player, .voice-player {
+  position: fixed;
+  bottom: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  z-index: 100;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.music-player {
+  left: 20px;
+}
+
+.voice-player {
+  right: 20px;
+}
+
+body.night .music-player,
+body.night .voice-player {
+  background: rgba(30, 41, 59, 0.95);
+  color: #f8f9fa;
+}
+
+.music-player:hover, .music-player:active,
+.voice-player:hover, .voice-player:active {
+  transform: scale(1.1);
+}
+
+.music-player.playing i,
+.voice-player.playing i {
+  color: var(--accent);
+}
+
+/* Progress indicator */
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  margin: 1.5rem 0 1rem;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+/* Button container for Yes/No */
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.button-container .btn {
+  flex: 1 1 auto;
+  max-width: 180px;
+  margin-top: 0;
+}
+
+/* No button specific style */
+#no {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#no:hover {
+  background: linear-gradient(135deg, #4b5563, #374151);
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-3px); }
+  20%, 40%, 60%, 80% { transform: translateX(3px); }
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    padding: 5px;
+  }
+  
+  .card {
+    padding: 1.8rem 1.2rem;
+    border-radius: 20px;
+  }
+  
+  .envelope-back {
+    height: 140px;
+  }
+  
+  .envelope-flap {
+    height: 70px;
+  }
+  
+  .memory {
+    padding: 1rem;
+    width: calc(100% - 35px);
+    margin-left: 35px;
+  }
+  
+  .toggle {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .music-player, .voice-player {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    bottom: 15px;
+  }
+  
+  .music-player {
+    left: 15px;
+  }
+  
+  .voice-player {
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 1.5rem 1rem;
+    border-radius: 18px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    min-height: 45px;
+    max-width: 100%;
+  }
+  
+  .button-container {
+    gap: 10px;
+  }
+  
+  .envelope-content {
+    padding: 1.2rem;
+  }
+  
+  .envelope.open .envelope-content {
+    padding: 1.2rem;
+  }
+  
+  .memory-lane::before {
+    left: 15px;
+  }
+  
+  .memory {
+    width: calc(100% - 30px);
+    margin-left: 30px;
+    padding: 0.9rem;
+  }
+  
+  .floating-hearts .heart {
+    font-size: 1rem;
+  }
+}
+
+/* Small height devices */
+@media (max-height: 700px) {
+  .card {
+    padding: 1.2rem 1rem;
+  }
+  
+  h1 {
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 0.8rem;
+  }
+  
+  .btn {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+/* Landscape orientation */
+@media (orientation: landscape) and (max-height: 600px) {
+  body {
+    padding: 5px;
+    align-items: flex-start;
+  }
+  
+  .container {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .photo-container {
+    margin: 1rem 0;
+  }
+  
+  .memory-lane {
+    margin: 1.5rem 0;
+  }
+}
+
+/* Prevent text selection on interactive elements */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+</style>
+</head>
+<body>
+
+<div class="toggle" onclick="toggleNight()">
+  <i class="fas fa-moon"></i>
+</div>
+
+<div class="music-player hidden" onclick="toggleMusic()">
+  <i class="fas fa-music"></i>
+</div>
+
+<div class="voice-player hidden" onclick="toggleVoiceNote()">
+  <i class="fas fa-microphone"></i>
+</div>
+
+<div class="floating-hearts" id="hearts"></div>
+
+<!-- PASSWORD SCREEN -->
+<div class="container" id="lock">
+  <div class="card fade-in">
+    <h1>My Dearest Gibisha</h1>
+    <p class="subtitle">This is a special place, just for you</p>
+    <p>To enter, please type the date that changed my life forever...</p>
+    <input type="password" id="pass" placeholder="DDMMYY format" autocomplete="off" inputmode="numeric">
+    <button class="btn" onclick="check()">
+      <i class="fas fa-lock-open"></i> Unlock My Heart
+    </button>
+    <p id="err" style="color:#ef4444; margin-top:1.2rem; font-size:0.9rem;"></p>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container hidden" id="app">
+  <div class="card fade-in" id="card">
+    <h1 id="title"></h1>
+    <p class="subtitle" id="subtitle"></p>
+    <p id="text"></p>
+
+    <!-- PHOTO REVEAL -->
+    <div class="photo-container hidden" id="photoContainer">
+      <img src="img/IMG_20260208_155114_064.jpg.jpeg" class="photo" id="photo" alt="Special moment">
+      <div class="caption hidden" id="caption">This moment... it means more to me than you could ever know.</div>
+    </div>
+
+    <!-- LOVE LETTER ENVELOPE -->
+    <div class="envelope hidden" id="envelope" onclick="toggleEnvelope()">
+      <div class="envelope-back">
+        <div class="envelope-flap"></div>
+        <div class="envelope-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+      </div>
+      <div class="envelope-content">
+        <h3 style="color: var(--accent); margin-bottom: 1rem;">My Love Letter to You</h3>
+        <p>My dearest Gibisha,</p>
+        <p>From the moment our paths crossed, my world gained colors I never knew existed. Your smile is my sunrise, your laughter my favorite melody.</p>
+        <p>Every day with you feels like a page from a beautiful story that I never want to end. You've touched my soul in ways I can't fully express with words.</p>
+        <p>This is just a small token of my infinite affection for you.</p>
+        <p style="text-align: right; margin-top: 1.5rem; font-family: 'Dancing Script', cursive; font-size: 1.4rem;">
+          Forever yours,<br>
+          <span style="color: var(--accent);">[Jim Jeffry "Your's Mown"]</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- MEMORY LANE -->
+    <div class="memory-lane hidden" id="memoryLane">
+      <div class="memory">
+        <div class="memory-date">The First Time We Met</div>
+        <div class="memory-text">I still remember how your eyes sparkled when you laughed. That was the moment I knew.</div>
+      </div>
+      <div class="memory">
+        <div class="memory-date">Our First Adventure</div>
+        <div class="memory-text">Getting lost with you was the best way to find what I was looking for all along.</div>
+      </div>
+      <div class="memory">
+        <div class="memory-date">Quiet Moments</div>
+        <div class="memory-text">Sometimes the most beautiful moments are the quiet ones, just being together.</div>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE BUTTONS -->
+    <button class="btn hidden" id="next" onclick="next()">
+      <i class="fas fa-forward"></i> Continue
+    </button>
+    
+    <div class="hidden" id="finalButtons">
+      <div class="button-container">
+        <button class="btn" id="yes" onclick="yes()">
+          <i class="fas fa-heart"></i> Yes, Absolutely! ❤️
+        </button>
+        <button class="btn" id="no" onclick="noClicked()">
+          <i class="fas fa-times"></i> No
+        </button>
+      </div>
+      <div id="noMessage" style="margin-top: 1rem; font-style: italic; color: var(--accent); min-height: 2rem;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- AUDIO ELEMENTS -->
+<audio id="bg-music" loop preload="auto">
+  <source src="audio/Eppadi Vandhaayo - Video Song  Aaromaley   Kishen Das, Shivathmika, Harshath Khan  Siddhu Kumar - Mini Music.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="voice-note" preload="auto">
+  <source src="audio/WhatsApp Audio 2026-02-11 at 12.09.33 AM - isolated.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="heartbeat-sound" preload="auto">
+  <source src="audio/kakaist-heartbeat-sfx-320981.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="celebration-music" preload="auto">  <!-- changed to preload auto -->
+  <source src="audio/Ithu Pothum Enakku Ithu Pothume WhatsApp Status [E-b9j7UTSJM].mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Configuration
+const correctPassword = "030305";
+const romanticLines = [
+  "My Dearest Gibisha...",
+  "Some people enter our lives quietly... and somehow, everything feels warmer, brighter, and more beautiful after that.",
+  "I didn't plan this feeling... it just grew, naturally and irresistibly, because of the amazing person you are.",
+  "You have this incredible way of turning ordinary moments into cherished memories...",
+  "Before I ask you something important... I want to share a special moment with you.",
+  "So here I am, with my heart in my hands... asking you from the deepest part of my soul."
+];
+
+const subtitles = [
+  "A message from my heart to yours",
+  "You make everything better",
+  "My favorite part of every day",
+  "This is our story",
+  "A moment I'll always cherish",
+  "The beginning of forever"
+];
+
+// State variables
+let currentLine = 0;
+let currentChar = 0;
+let isNightMode = false;
+let isMusicPlaying = false;
+let isVoiceNotePlaying = false;
+let isYesClicked = false;          // becomes true only after clicking the YES button
+
+// DOM Elements
+const lockScreen = document.getElementById('lock');
+const appScreen = document.getElementById('app');
+const passwordInput = document.getElementById('pass');
+const errorMsg = document.getElementById('err');
+const title = document.getElementById('title');
+const subtitle = document.getElementById('subtitle');
+const text = document.getElementById('text');
+const photoContainer = document.getElementById('photoContainer');
+const photo = document.getElementById('photo');
+const caption = document.getElementById('caption');
+const envelope = document.getElementById('envelope');
+const memoryLane = document.getElementById('memoryLane');
+const nextBtn = document.getElementById('next');
+const finalButtons = document.getElementById('finalButtons');
+const yesBtn = document.getElementById('yes');
+const noBtn = document.getElementById('no');
+const noMessageDiv = document.getElementById('noMessage');
+const progressBar = document.getElementById('progress');
+const bgMusic = document.getElementById('bg-music');
+const voiceNote = document.getElementById('voice-note');
+const heartbeatSound = document.getElementById('heartbeat-sound');
+const celebrationMusic = document.getElementById('celebration-music');
+const toggleBtn = document.querySelector('.toggle');
+const musicBtn = document.querySelector('.music-player');
+const voiceBtn = document.querySelector('.voice-player');
+const heartsContainer = document.getElementById('hearts');
+
+// Initialize floating hearts
+function createHearts() {
+  heartsContainer.innerHTML = '';
+  const heartCount = window.innerWidth < 480 ? 15 : 25;
+  
+  for (let i = 0; i < heartCount; i++) {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerHTML = '❤️';
+    heart.style.left = `${Math.random() * 100}%`;
+    heart.style.animationDelay = `${Math.random() * 5}s`;
+    heart.style.fontSize = `${Math.random() * 15 + 10}px`;
+    heartsContainer.appendChild(heart);
+  }
+}
+
+// Password validation
+function check() {
+  const enteredPassword = passwordInput.value.trim();
+  
+  if (enteredPassword === correctPassword) {
+    lockScreen.classList.add('hidden');
+    appScreen.classList.remove('hidden');
+    progressBar.style.width = '100%';
+    createHearts();
+    typeWriter();
+    
+    musicBtn.classList.remove('hidden');
+    voiceBtn.classList.remove('hidden');
+    
+    setTimeout(() => {
+      bgMusic.volume = 0.4;
+      bgMusic.play().then(() => {
+        isMusicPlaying = true;
+        musicBtn.classList.add('playing');
+        musicBtn.innerHTML = '<i class="fas fa-pause"></i>';
+      }).catch(e => {
+        console.log("Autoplay prevented:", e);
+        musicBtn.innerHTML = '<i class="fas fa-play"></i>';
+      });
+    }, 500);
+    
+  } else {
+    errorMsg.textContent = "That's not the date that lives in my heart ❤️ Try again...";
+    lockScreen.classList.add('shake');
+    passwordInput.style.borderColor = '#ef4444';
+    
+    const progress = Math.min(enteredPassword.length / correctPassword.length * 100, 90);
+    progressBar.style.width = `${progress}%`;
+    
+    setTimeout(() => {
+      lockScreen.classList.remove('shake');
+    }, 500);
+  }
+}
+
+// Typewriter effect for romantic lines
+function typeWriter() {
+  if (currentChar < romanticLines[currentLine].length) {
+    text.innerHTML += romanticLines[currentLine].charAt(currentChar);
+    currentChar++;
+    setTimeout(typeWriter, 45);
+  } else {
+    if (currentLine === 0) {
+      subtitle.textContent = subtitles[currentLine];
+      subtitle.classList.remove('hidden');
+    }
+    
+    if (currentLine === 2) {
+      setTimeout(() => {
+        photoContainer.classList.remove('hidden');
+        setTimeout(() => {
+          photo.classList.add('reveal');
+          caption.classList.remove('hidden');
+          setTimeout(() => {
+            caption.classList.add('show');
+          }, 300);
+        }, 600);
+      }, 800);
+    }
+    
+    if (currentLine === 3) {
+      setTimeout(() => {
+        envelope.classList.remove('hidden');
+      }, 1000);
+    }
+    
+    if (currentLine === romanticLines.length - 1) {
+      setTimeout(() => {
+        nextBtn.classList.add('hidden');
+        finalButtons.classList.remove('hidden');
+        document.getElementById('card').classList.add('heartbeat');
+        
+        heartbeatSound.volume = 0.5;
+        heartbeatSound.play().catch(e => console.log("Heartbeat sound error:", e));
+        
+        if (navigator.vibrate) {
+          navigator.vibrate([200, 100, 200, 100, 200]);
+        }
+      }, 1500);
+    } else {
+      nextBtn.classList.remove('hidden');
+    }
+  }
+}
+
+// Next button handler
+function next() {
+  currentChar = 0;
+  currentLine++;
+  text.innerHTML = "";
+  nextBtn.classList.add('hidden');
+  
+  if (currentLine < subtitles.length) {
+    subtitle.textContent = subtitles[currentLine];
+  }
+  
+  if (currentLine < romanticLines.length) {
+    typeWriter();
+  }
+}
+
+// Envelope toggle
+function toggleEnvelope() {
+  envelope.classList.toggle('open');
+}
+
+// No button click handler
+function noClicked() {
+  if (isYesClicked) return; // if already said yes, ignore
+  
+  // Display the message in the div
+  noMessageDiv.innerHTML = "💔 sorry to say this, this is the only option for u otherwise your mown will kill u...";
+  
+  // Optionally disable the no button after click
+  noBtn.disabled = true;
+  noBtn.style.opacity = "0.6";
+  
+  // Also vibrate for effect
+  if (navigator.vibrate) navigator.vibrate(100);
+}
+
+// Yes button handler
+function yes() {
+  if (isYesClicked) return;
+  isYesClicked = true;
+  
+  yesBtn.disabled = true;
+  noBtn.disabled = true;
+  
+  if (isMusicPlaying) {
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
+    isMusicPlaying = false;
+    musicBtn.classList.remove('playing');
+    musicBtn.innerHTML = '<i class="fas fa-music"></i>';
+  }
+  
+  if (isVoiceNotePlaying) {
+    voiceNote.pause();
+    voiceNote.currentTime = 0;
+    isVoiceNotePlaying = false;
+    voiceBtn.classList.remove('playing');
+    voiceBtn.innerHTML = '<i class="fas fa-microphone"></i>';
+  }
+  
+  document.querySelectorAll('.confetti').forEach(c => c.remove());
+  createConfetti(50);
+  
+  setTimeout(() => {
+    voiceNote.currentTime = 0;
+    voiceNote.volume = 1.0;
+    voiceNote.play().then(() => {
+      isVoiceNotePlaying = true;
+      voiceBtn.classList.add('playing');
+      voiceBtn.innerHTML = '<i class="fas fa-pause"></i>';
+      
+      voiceNote.onended = function() {
+        isVoiceNotePlaying = false;
+        voiceBtn.classList.remove('playing');
+        voiceBtn.innerHTML = '<i class="fas fa-microphone"></i>';
+        showCelebration();
+      };
+    }).catch(e => {
+      console.log("Voice note play error:", e);
+      showCelebration();
+    });
+  }, 500);
+}
+
+// Show celebration after voice note
+function showCelebration() {
+  createConfetti(200);
+  
+  const card = document.getElementById('card');
+  card.innerHTML = `
+    <h1>You Said Yes! ❤️</h1>
+    <p class="subtitle">This is the beginning of our beautiful journey</p>
+    <p>My heart is overflowing with joy! You've made this the happiest moment of my life.</p>
+    <div style="margin: 1.5rem 0; font-size: 3rem; color: var(--accent);">
+      <i class="fas fa-heart heartbeat"></i>
+    </div>
+    <p>I promise to cherish you, adore you, and make every day as special as this one.</p>
+    <p style="margin-top: 1.5rem; font-family: 'Dancing Script', cursive; font-size: 1.6rem;">
+      Forever and always...
+    </p>
+    <div style="margin-top: 2rem;">
+      <button class="btn" onclick="createConfetti(100)">
+        <i class="fas fa-heart"></i> More Confetti!
+      </button>
+    </div>
+  `;
+  
+  // Play celebration music
+  celebrationMusic.volume = 0.6;
+  celebrationMusic.play().then(() => {
+    celebrationMusic.onended = function() {
+      const replayBtn = document.createElement('button');
+      replayBtn.className = 'btn btn-outline';
+      replayBtn.style.marginTop = '1rem';
+      replayBtn.innerHTML = '<i class="fas fa-redo"></i> Play Celebration Again';
+      replayBtn.onclick = function() {
+        celebrationMusic.currentTime = 0;
+        celebrationMusic.play();
+        createConfetti(50);
+      };
+      card.querySelector('div:last-child').appendChild(replayBtn);
+    };
+  }).catch(e => {
+    console.log("Celebration music error:", e);
+  });
+  
+  setTimeout(createHearts, 1000);
+  
+  if (navigator.vibrate) {
+    navigator.vibrate([300, 100, 300, 100, 300, 100, 500]);
+  }
+}
+
+// Create confetti
+function createConfetti(count) {
+  for (let i = 0; i < count; i++) {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.left = Math.random() * 100 + 'vw';
+    confetti.style.backgroundColor = ['#ff4d6d', '#ff758f', '#ff8fa3', '#ffb3c1'][Math.floor(Math.random() * 4)];
+    confetti.style.width = Math.random() * 12 + 4 + 'px';
+    confetti.style.height = confetti.style.width;
+    document.body.appendChild(confetti);
+    
+    const animation = confetti.animate([
+      { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+      { transform: `translate(${(Math.random() - 0.5) * 200}px, 100vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+    ], {
+      duration: 2000 + Math.random() * 2000,
+      easing: 'cubic-bezier(0.1, 0.8, 0.9, 0.1)'
+    });
+    
+    animation.onfinish = () => {
+      confetti.remove();
+    };
+  }
+}
+
+// Night mode toggle
+function toggleNight() {
+  document.body.classList.toggle('night');
+  isNightMode = !isNightMode;
+  
+  const icon = toggleBtn.querySelector('i');
+  if (isNightMode) {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  } else {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  }
+}
+
+// Music toggle
+function toggleMusic() {
+  if (isMusicPlaying) {
+    bgMusic.pause();
+    musicBtn.classList.remove('playing');
+    musicBtn.innerHTML = '<i class="fas fa-music"></i>';
+  } else {
+    bgMusic.play().then(() => {
+      musicBtn.classList.add('playing');
+      musicBtn.innerHTML = '<i class="fas fa-pause"></i>';
+    }).catch(e => {
+      console.log("Music play error:", e);
+      musicBtn.innerHTML = '<i class="fas fa-play"></i>';
+    });
+  }
+  isMusicPlaying = !isMusicPlaying;
+}
+
+// Voice note toggle – disabled until YES is clicked
+function toggleVoiceNote() {
+  if (!isYesClicked) {
+    if (navigator.vibrate) navigator.vibrate(50);
+    return;
+  }
+  
+  if (isVoiceNotePlaying) {
+    voiceNote.pause();
+    voiceBtn.classList.remove('playing');
+    voiceBtn.innerHTML = '<i class="fas fa-microphone"></i>';
+    
+    if (isMusicPlaying) {
+      bgMusic.volume = 0.4;
+    }
+  } else {
+    if (isMusicPlaying) {
+      bgMusic.volume = 0.2;
+    }
+    voiceNote.play().then(() => {
+      voiceBtn.classList.add('playing');
+      voiceBtn.innerHTML = '<i class="fas fa-pause"></i>';
+    }).catch(e => {
+      console.log("Voice note play error:", e);
+      voiceBtn.innerHTML = '<i class="fas fa-play"></i>';
+    });
+  }
+  isVoiceNotePlaying = !isVoiceNotePlaying;
+}
+
+// Handle voice note ended event (for manual toggling)
+voiceNote.addEventListener('ended', function() {
+  if (!isYesClicked) {
+    isVoiceNotePlaying = false;
+    voiceBtn.classList.remove('playing');
+    voiceBtn.innerHTML = '<i class="fas fa-microphone"></i>';
+    
+    if (isMusicPlaying) {
+      bgMusic.volume = 0.4;
+    }
+  }
+});
+
+// Password input event listener
+passwordInput.addEventListener('input', (e) => {
+  const progress = Math.min(passwordInput.value.length / correctPassword.length * 100, 90);
+  progressBar.style.width = `${progress}%`;
+  
+  errorMsg.textContent = '';
+  passwordInput.style.borderColor = '#e5e7eb';
+});
+
+passwordInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    check();
+  }
+});
+
+// Initialize memory lane after photo reveal
+setTimeout(() => {
+  if (memoryLane) {
+    memoryLane.classList.remove('hidden');
+  }
+}, 4000);
+
+// Handle mobile viewport height
+function setVH() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Initialize on load
+window.addEventListener('DOMContentLoaded', () => {
+  createHearts();
+  setVH();
+  
+  document.body.style.backgroundSize = '400% 400%';
+  
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    body { animation: gradient 15s ease infinite; }
+  `;
+  document.head.appendChild(style);
+  
+  window.addEventListener('orientationchange', () => {
+    setTimeout(() => {
+      createHearts();
+      setVH();
+    }, 300);
+  });
+  
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      createHearts();
+      setVH();
+    }, 250);
+  });
+  
+  document.body.addEventListener('touchmove', (e) => {
+    if (e.touches.length > 1) e.preventDefault();
+  }, { passive: false });
+});
+
+// Handle page visibility for audio
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    if (isMusicPlaying) bgMusic.pause();
+    if (isVoiceNotePlaying) voiceNote.pause();
+  } else {
+    if (isMusicPlaying) bgMusic.play().catch(e => console.log("Autoplay prevented"));
+    if (isVoiceNotePlaying) voiceNote.play().catch(e => console.log("Autoplay prevented"));
+  }
+});
+</script>
+
+</body>
+</html>
